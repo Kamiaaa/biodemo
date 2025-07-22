@@ -50,8 +50,7 @@ const ProjectGallery: React.FC = () => {
               <p className="text-gray-50 text-lg mt-2">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit autem quaerat explicabo, voluptatum,
                 assumenda placeat reiciendis aliquid itaque voluptates facere odit laboriosam, exercitationem aperiam
-                labore dolorem quasi quia minima. Fugiat maxime, molestias molestiae aliquid animi quas voluptas natus
-                sequi iusto atque placeat, suscipit, voluptatem laborum libero sit fuga deserunt accusamus!
+                labore dolorem quasi quia minima. Fugiat maxime, molestias molestiae aliquid animi
               </p>
             </div>
           </div>
