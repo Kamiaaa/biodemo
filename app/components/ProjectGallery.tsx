@@ -32,7 +32,7 @@ const ProjectGallery: React.FC = () => {
 
       <section className="flex flex-wrap gap-10 w-full justify-center items-center">
         {cards.map((card, index) => (
-          <div key={index} className="relative group w-80">
+          <div key={index} className="relative group w-70">
             <span className="flex flex-col justify-center items-center">
               <Image
                 src={card.image}

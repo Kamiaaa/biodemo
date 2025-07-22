@@ -31,7 +31,7 @@ export default function Slider() {
   return (
     <div className="w-full mt-16">
       {/* Main Image Slider */}
-      <div className="relative w-full h-[80vh] overflow-hidden shadow-md">
+      <div className="relative w-full h-[90vh] overflow-hidden shadow-md -z-50">
         {/* Slides */}
         {images.map((src, index) => (
           <div
