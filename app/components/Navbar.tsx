@@ -179,8 +179,8 @@ export default function Navbar() {
                 <p className="text-gray-700 text-xl font-semibold">16594</p>
               </div>
               <div>
-                <h3 className="text-lg font-medium text-gray-800">International Callers:</h3>
-                <p className="text-gray-700 text-xl font-semibold">+880 9612-111444</p>
+                <h3 className="text-lg font-medium text-gray-800">Cell/WhatsApp:</h3>
+                <p className="text-gray-700 text-xl font-semibold">+88017 51 51 12 12</p>
               </div>
             </div>
           </div>
