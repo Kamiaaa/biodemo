@@ -29,9 +29,9 @@ export default function Slider() {
   }, [length]);
 
   return (
-    <div className="w-full mt-16">
+    <div className="w-full mt-16 relative">
       {/* Main Image Slider */}
-      <div className="relative w-full h-[90vh] overflow-hidden shadow-md -z-50">
+      <div className="relative w-full h-[90vh] overflow-hidden shadow-md">
         {/* Slides */}
         {images.map((src, index) => (
           <div
@@ -53,19 +53,19 @@ export default function Slider() {
         {/* Arrows */}
         <button
           onClick={() => setCurrent((prev) => (prev - 1 + length) % length)}
-          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl z-20"
+          className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white text-3xl z-40"
         >
           <FaCircleArrowLeft />
         </button>
         <button
           onClick={() => setCurrent((prev) => (prev + 1) % length)}
-          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl z-20"
+          className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white text-3xl z-40"
         >
           <FaCircleArrowRight />
         </button>
 
-        {/* ✅ Thumbnails - Bottom-Right Above Icon Bar */}
-        <div className="absolute bottom-44 right-4 z-30 flex gap-3 bg-black/40 px-4 py-2 rounded-md">
+        {/* Thumbnails */}
+        <div className="absolute bottom-44 right-4 z-50 flex gap-3 bg-black/40 px-4 py-2 rounded-md">
           {images.map((src, index) => (
             <div
               key={index}
@@ -86,9 +86,9 @@ export default function Slider() {
         </div>
 
         {/* Icons Bar */}
-        <div className="absolute bottom-0 w-full h-40 z-20">
+        <div className="absolute bottom-0 w-full h-40 z-50">
           {/* Desktop version */}
-          <div className="hidden md:flex absolute inset-0 bg-black/40 backdrop-blur-md items-center px-10">
+          <div className="hidden md:flex absolute inset-0 bg-black/40 backdrop-blur-md items-center px-10 z-50">
             <div className="text-white text-2xl font-semibold w-1/3">
               Explore Our Projects
             </div>
@@ -98,14 +98,14 @@ export default function Slider() {
                 <Link
                   key={idx}
                   href={icon.href}
-                  className="flex flex-col items-center text-white"
+                  className="flex flex-col items-center text-white group relative z-50"
                 >
                   <Image
                     src={icon.src}
                     alt={icon.alt}
                     width={60}
                     height={60}
-                    className="hover:scale-110 transition-transform"
+                    className="transition-transform duration-300 group-hover:scale-110"
                   />
                   <span className="mt-1 text-sm">{icon.label}</span>
                 </Link>
@@ -114,7 +114,7 @@ export default function Slider() {
           </div>
 
           {/* Mobile version */}
-          <div className="flex md:hidden flex-col items-center justify-center absolute inset-0 bg-black/40 backdrop-blur-md px-4 py-3 gap-3">
+          <div className="flex md:hidden flex-col items-center justify-center absolute inset-0 bg-black/40 backdrop-blur-md px-4 py-3 gap-3 z-50">
             <div className="text-white text-lg font-semibold text-center">
               Explore Our Categories
             </div>
@@ -123,14 +123,14 @@ export default function Slider() {
                 <Link
                   key={idx}
                   href={icon.href}
-                  className="flex flex-col items-center text-white"
+                  className="flex flex-col items-center text-white group"
                 >
                   <Image
                     src={icon.src}
                     alt={icon.alt}
                     width={35}
                     height={35}
-                    className="hover:scale-110 transition-transform"
+                    className="transition-transform duration-300 group-hover:scale-110"
                   />
                   <span className="mt-1 text-xs">{icon.label}</span>
                 </Link>

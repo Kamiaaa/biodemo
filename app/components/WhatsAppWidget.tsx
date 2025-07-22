@@ -25,7 +25,7 @@ export default function WhatsAppWidget() {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 flex flex-col items-end gap-2">
+    <div className="fixed bottom-6 right-6 flex flex-col items-end gap-2 z-50">
       {isOnline && (
         <div className="bg-white rounded-lg shadow-md p-2 text-sm animate-pulse">
           <div className="flex items-center gap-2 text-green-600">
